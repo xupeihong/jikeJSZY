@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style type="text/css">
+        form {
+            margin: 30px 20px;
+        }
+
+        span {
+            margin-left: 33px;
+        }
+
+        .btn {
+            margin-left: 80px;
+        }
+    </style>
+
+
+</head>
+<body>
+<form method="post" name="f2">
+    <div style=" width: 300px;height: 200px; border: 1px solid black;">
+        <div style="height: 30px; line-height: 30px;  background-color: blue;">
+            <tr style="margin-left: 20px;">
+                <td><span style=" color: white;font-weight: bold;">会员登陆</span></td>
+            </tr>
+        </div>
+        <div style="height: 150px; margin-top: 20px; ">
+            <tr>
+                <td><span>姓名：</span><input type="text"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><span>邮箱：</span><input type="text"></td>
+            </tr>
+            <br>
+            <tr>
+                <td>联系电话：<input type="text"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><input type="button" value="登陆" class="btn"></td>
+            </tr>
+
+        </div>
+    </div>
+
+</form>
+
+</body>
+</html>

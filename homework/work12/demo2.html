@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        String.prototype.getPhone=function () {
+            var num=[153,186,155];
+            var str=this;
+            if(str.length!=11)//长度不够11为
+                return false;
+            if(isNaN(str))//不是数字
+                return false;
+            if(num!=null)
+            {
+                var type=true;
+                //判断前3个数字是不是满足要求
+                for(var i=0;i<num.length;i++)
+                {
+                    if(num[i]==str.substring(0,3))
+                    {
+                        type= false;
+                        break;
+                    }
+                }
+                if(type)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        if("15392860853".getPhone())
+        {
+            document.write("格式正确");
+        }
+        else{
+            document.write("手机格式错误");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

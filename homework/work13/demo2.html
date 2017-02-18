@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+        }
+
+        #maindiv {
+            width: 310px;
+            height: 400px;
+            background: #2C1740;
+            margin: 0 auto;
+        }
+
+        #maindiv .lbname {
+            display: block;
+            margin-left: 30px;
+            color: white;
+            height: 30px;
+            text-align: left;
+            line-height: 30px;
+        }
+
+        #content {
+            width: 310px;
+            height: 100px;
+            background: #543382;
+            color: white;
+            padding-bottom: 0px;
+            padding-top: 43px;
+            padding-left: 250px;
+            box-sizing: border-box;
+            font-weight: bold;
+        }
+
+        #num {
+            width: 310px;
+            height: 20px;
+            line-height: 20px;
+            background: #543382;
+            border: 0;
+            color: white;
+            margin-left: -250px;
+            font-weight: bold;
+            padding-left: 250px;
+            box-sizing: border-box;
+        }
+
+        #result {
+            width: 310px;
+            height: 60px;
+            cursor: pointer;
+        }
+
+        #result .lb1, #lb5 {
+            display: block;
+            width: 75px;
+            height: 48px;
+            line-height: 48px;
+            background: #3D568C;
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        #result .lb1:hover {
+            background-color: lightgray;
+        }
+
+        #result #lb5:hover {
+            background-color: lightgray;
+        }
+
+        #other {
+            width: 310px;
+            height: 230px;
+        }
+
+        #other ul li {
+            float: left;
+        }
+
+        #other .lb2 {
+            display: block;
+            width: 60px;
+            height: 50px;
+            line-height: 50px;
+            background: #717171;
+            border: 1px solid black;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+        #other .lb2:hover {
+            background-color: lightgray;
+
+        }
+
+        #other .lb3, #lb4, #lb6 {
+            display: block;
+            width: 60px;
+            height: 50px;
+            line-height: 50px;
+            background: #D56503;
+            border: 1px solid black;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+        #other .lb3:hover {
+            background-color: lightgray;
+        }
+
+        #other #lb4:hover {
+            background-color: lightgray;
+        }
+
+        #other #lb6:hover {
+            background-color: lightgray;
+        }
+
+        #note {
+            float: left;
+            width: 210px;
+            height: auto;
+            overflow: hidden;
+            color: red;
+            margin-left: -100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="maindiv">
+    <lable class="lbname">计算器</lable>
+    <div id="content">
+        <span id="note"></span>
+        <input type="text" onfocus="this.blur();" id="num" value="0">
+    </div>
+    <div id="result">
+        <ul>
+            <li>
+                <lable class="lb1" onclick="sin()">sin</lable>
+            </li>
+            <li>
+                <lable class="lb1" onclick="cos()">cos</lable>
+            </li>
+            <li>
+                <lable class="lb1" onclick="tan()">tan</lable>
+            </li>
+            <li>
+                <lable id="lb5" onclick="clearnum()">AC</lable>
+            </li>
+        </ul>
+    </div>
+    <div id="other">
+        <ul>
+            <li>
+                <lable class="lb2" onclick="command(1)">1</lable>
+            </li>
+            <li>
+                <lable class="lb2" onclick="command(2)">2</lable>
+            </li>
+            <li>
+                <lable class="lb2" onclick="command(3)">3</lable>
+            </li>
+            <li>
+                <lable class="lb3" onclick="plus()">+</lable>
+            </li>
+            <li>
+                <lable class="lb3" onclick="jian()">-</lable>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <lable class="lb2" onclick="command(4)">4</lable>
+            </li>
+            <li>
+                <lable class="lb2" onclick="command(5)">5</lable>
+            </li>
+            <li>
+                <lable class="lb2" onclick="command(6)">6</lable>
+            </li>
+            <li>
+                <lable class="lb3" onclick="chen()">*</lable>
+            </li>
+            <li>
+                <lable class="lb3" onclick="chu()">/</lable>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <lable class="lb2" onclick="command(7)">7</lable>
+            </li>
+            <li>
+                <lable class="lb2" onclick="command(8)">8</lable>
+            </li>
+            <li>
+                <lable class="lb2" onclick="command(9)">9</lable>
+            </li>
+            <li>
+                <lable class="lb3" onclick="yu()">%</lable>
+            </li>
+            <li>
+                <lable class="lb3" onclick="gen()">√</lable>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <lable class="lb2" onclick="command(0)">0</lable>
+            </li>
+            <li>
+                <lable class="lb2" onclick="dot()">.</lable>
+            </li>
+            <li>
+                <lable class="lb2" onclick="zhenfu()" value="+/-" id="zhenfu">+/-</lable>
+            </li>
+            <li>
+                <lable id="lb4" onclick="clearnum()">c</lable>
+            </li>
+            <li>
+                <lable id="lb6" onclick="equal()">=</lable>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<script type="application/javascript">
+    var num = 0, result = 0, numshow = "0";
+    var operate = 0;//判断输入状态
+    var calcul = 0;//判断计算状态
+    var quit = 0;//防止重复按键的标志
+    var va = document.getElementById("num");//获取输入的值
+    var ds = document.getElementById("zhenfu");
+    function command(num) {
+        va.value = (va.value != "0") ? ((operate == 0) ? va.value : "") : "";//
+        va.value = va.value + String(num);//给当前字符追加字符
+        va.value = va.value;//刷新显示
+        operate = 0;//重置输入状态
+        quit = 0;//防止重复输入状态
+    }
+
+    function dot() {
+        va.value = (va.value != "0") ? ((operate == 0) ? va.value : "0") : "0";
+        for (var i = 0; i <= va.value.length; i++) {
+            if (va.value.substr(i, 1) == ".")
+                return false;
+        }
+        va.value = va.value + ".";
+        va.value = va.value;
+        operate = 0;
+    }
+    //清除数据
+    function clearnum() {
+        num = 0;
+        result = 0;
+        numshow = "0";
+        va.value = "0";
+    }
+    //加法
+    function plus() {
+        calculate();//计算函数
+        operate = 1;//更改输入状态
+        calcul = 1;//更改计算状态
+    }
+    function jian() {
+        calculate();//计算函数
+        operate = 1;//更改输入状态
+        calcul = 2;//更改计算状态
+    }
+    function chen() {
+        calculate();//计算函数
+        operate = 1;//更改输入状态
+        calcul = 3;//更改计算状态
+    }
+    function chu() {
+        calculate();//计算函数
+        operate = 1;//更改输入状态
+        calcul = 4;//更改计算状态
+    }
+    function yu() {
+        va.value = va.value / 100;
+        operate = 1;//更改输入状态
+        calcul = 5;//更改计算状态
+    }
+    function equal() {
+        calculate();//计算函数
+        operate = 1;//更改输入状态
+        num = 0;
+        result = 0;
+        numshow = "0";
+    }
+    //开根号
+    function gen() {
+        va.value = Math.sqrt(va.value);
+        operate = 1;
+        calcul = 6;
+    }
+    //tan值
+    function tan() {
+        va.value = Math.tan(va.value);
+        operate = 1;
+        calcul = 7;
+    }
+    //正负运算
+    function zhenfu() {
+        if (ds.innerHTML == "+/-") {
+            va.value = -1 * va.value;
+        }
+        operate = 1;
+        calcul = 8;
+    }
+    function sin() {
+        va.value = Math.sin(va.value);
+        operate = 1;
+        calcul = 9;
+    }
+    function cos() {
+        va.value = Math.cos(va.value);
+        operate = 1;
+        calcul = 10;
+    }
+    function calculate() {
+        numshow = Number(va.value);
+        if (num != 0 && quit != 1) {
+            switch (calcul) {
+                case 1:
+                    result = num + numshow;
+                    break;
+                case 2:
+                    result = num - numshow;
+                    break;
+                case 3:
+                    result = num * numshow;
+                    break;
+                case 4:
+                    if (numshow != 0)
+                        result = num / numshow;
+                    else {
+                        document.getElementById("note").innerHTML = "除数不能为零！";
+                        setTimeout(clearnote, 4000);
+                    }
+                    break;
+                case  7:
+                    result = Math.tan(num);
+                    break;
+                case 9:
+                    result = Math.sin(num);
+                    break;
+                case 10:
+                    result = Math.cos(num);
+                    break;
+            }
+            quit = 1;//防止重复按键
+        }
+        else {
+            result = numshow;
+        }
+        numshow = String(result);
+        va.value = numshow;
+        num = result;//存储当前值
+    }
+    function clearnote() {
+        document.getElementById("note").innerHTML = "";
+    }
+
+</script>
+</body>
+</html>

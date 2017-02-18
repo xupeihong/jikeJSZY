@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求闰年</title>
+    <script type="application/javascript">
+        function isrun() {
+            var year = prompt("请输入年份");
+            var res = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? "是闰年" : "不是闰年";
+            alert(year + res);
+        }
+    </script>
+</head>
+<body>
+<button onclick="isrun()">判断闰年</button>
+</body>
+</html>

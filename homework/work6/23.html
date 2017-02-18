@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        function foo(a) {
+            arguments[0] = 2;
+            alert(a);
+        }
+        foo(1);
+        //变量函数调用
+        var sum = function add(num1, num2) {
+            return num1 + num2;
+        }
+
+    </script>
+</head>
+<body>
+<button onclick="foo(a)"></button>
+<script type="application/javascript">
+    alert(sum(1, 2));
+</script>
+</body>
+</html>

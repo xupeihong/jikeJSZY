@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            border: 1px solid black;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+    </style>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script type="application/javascript">
+        $(function () {
+            /*$("button").click(function () {
+             var img = $("<img>");
+             $("div").append(img);
+             $("img").attr("src", "img/focus.jpg");
+             });*/
+
+           /* var s;
+            var w;
+            var h;*/
+            $("img").mouseover(function () {
+                /*w = $("img").width();//图片宽度
+                h = $("img").height();//图片高度*/
+                $(this).animate({"top": "-100px", "left": "-100px", "width": "400px", "height": "400px"}, 1000);
+                /*i++;
+                 s = $("div").width();//div容器宽度
+                 w = $("img").width();//图片宽度
+                 h = $("img").height();//图片高度
+                 if (w > s) {
+                 var height = (s * h) / w;//高度等比缩放
+                 $(this).css({"width": s, "height": height});
+                 }
+                 else {
+                 $("img").css({"width": w * i + "px", "height": h * i + "px"});
+                 }*/
+            }).mouseout(function () {
+                $(this).animate({"top": "0px", "left": "0px", "width": "200px", "height": "200px"}, 1000);
+                /*  s = $("div").width();//div容器宽度
+                 w = $("img").width();
+                 h = $("img").height();
+                 if (w > s) {
+                 var height = (s * w) / h;//高度等比缩放
+                 $(this).css({"width": s + "px", "height": height + "px"});
+                 } else {
+                 $("img").css({"width": w / i + "px", "height": h / i + "px"});
+                 }*/
+            });
+        })
+    </script>
+</head>
+<body>
+<button>创建图片</button>
+<br>
+<div><img src="img/focus.jpg" alt=""></div>
+
+</body>
+</html>

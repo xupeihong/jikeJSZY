@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="text" id="zhi">
+<button id="btn" onclick="dafen()">获取分数</button>
+<button onclick="getscore()">获取分数</button>
+<div id="res"></div>
+<script type="application/javascript">
+
+    function dafen() {
+        var score = document.getElementById("zhi").value;
+        score = Math.floor(score / 10);
+        if (score >= 0 && score <= 100) {
+            switch (score) {
+                case 10:
+                case 9:
+                    document.getElementById("res").innerHTML = "A";
+                    break;
+                case 8:
+                    document.getElementById("res").innerHTML = "B";
+                    break;
+                case 7:
+                    document.getElementById("res").innerHTML = "C";
+                    break;
+                case 6:
+                    document.getElementById("res").innerHTML = "D";
+                    break;
+                default:
+                    document.getElementById("res").innerHTML = "E";
+                    break;
+            }
+        }
+        else
+            document.getElementById("res").innerHTML = "超出范围";
+    }
+    function getscore() {
+        var score = document.getElementById("zhi").value;
+        if (score > 90 && score <= 100)
+            document.getElementById("res").innerHTML = "A";
+        else if (score > 80 && score <= 90)
+            document.getElementById("res").innerHTML = "B";
+        else if (score > 70 && score <= 80)
+            document.getElementById("res").innerHTML = "C";
+        else if (score > 60 && score <= 70)
+            document.getElementById("res").innerHTML = "D";
+        else if (score > 0 && score <= 60)
+            document.getElementById("res").innerHTML = "E";
+        else
+            document.getElementById("res").innerHTML = "超出范围";
+    }
+</script>
+</body>
+</html>

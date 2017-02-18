@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统时间格式</title>
+</head>
+<body>
+<div id="div"></div>
+<script type="application/javascript">
+    function gettime() {
+        var time=new Date();
+        var week=["日","一","二","三","四","五","六"];
+        var res=document.getElementById("div");
+         res.innerHTML=time.getFullYear()+"年"+changenum(time.getMonth()+1)+"月"
+                 +changenum(time.getDate())+"日 星期"+week[time.getDay()]+" "
+                 +changenum(time.getHours())+":"+changenum(time.getMinutes())+":"+changenum(time.getSeconds());
+    }
+    setInterval(gettime,1000);
+    //判断数值小于10的
+       function changenum(num) {
+             return num<10?("0"+num):num;
+       }
+</script>
+</body>
+</html>

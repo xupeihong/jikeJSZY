@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        function result() {
+            var num1 = prompt("数字1");
+            var num2 = prompt("数字2");
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            var fu = prompt("输入字符");
+            var res;
+            //方法一：
+            var res3=fu=="+"?num1+num2:fu=="-"?num1-num2:fu=="*"?num1*num2:fu=="/"?num1/num2:"";
+            alert(res3);
+            //方法二：
+            if (fu == "-")
+                res = parseInt(num1) - parseInt(num2);
+            else if (fu == "+")
+                res = parseInt(num1) + parseInt(num2);
+            else if (fu == "*")
+                res = parseInt(num1) * parseInt(num2);
+            else
+                res = parseInt(num1) / parseInt(num2);
+            //alert(res);
+        }
+    </script>
+</head>
+<body>
+<button onclick="result()">最后的结果</button>
+</body>
+</html>

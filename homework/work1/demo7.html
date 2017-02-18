@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东登录页</title>
+    <style type="text/css">
+        .head {
+            border: 1px solid black;
+            width: 990px;
+        }
+
+        .logo-box {
+            margin-left: 125px;
+        }
+
+        .left {
+            height: 60px;
+            line-height: 60px;
+
+        }
+
+        .logo-r {
+            position: relative;
+            bottom: 20px;
+            font-weight: bold;
+        }
+
+        .content {
+            border: 1px solid black;
+        }
+
+        .foot {
+            border: 1px solid black;
+        }
+
+        .content {
+            background-image: url("img/banner.png");
+            width: 990px;
+            height: 475px;
+        }
+
+        .login-form {
+            background-color: antiquewhite;
+            width: 300px;
+            height: 230px;
+            margin-left: 450px;
+            margin-top: 100px;
+        }
+
+        .login-form h3 {
+            margin-left: 10px;
+            padding-top: 10px;
+        }
+
+        .login-form a {
+            text-decoration: none;
+            color: red;
+            margin-left: 20px;
+        }
+
+        .item {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .item a {
+            color: black;
+        }
+
+        .link, .copy {
+            text-align: center;
+            height: 30px;
+            line-height: 40px;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: black;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .login-btn {
+            color: white;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            width: 250px;
+            margin-left: 20px;
+            background-color: red;
+            margin-top: 10px;
+        }
+
+        .nick {
+            display: inline-block;
+            border: 0px solid black;
+            background-image: url("img/login-icons.png");
+            background-repeat: no-repeat;
+            width: 38px;
+            height: 38px;
+            float: left;
+        }
+
+        .psw {
+            display: inline-block;
+            border: 0px solid black;
+            background-image: url("img/login-icons.png");
+            background-repeat: no-repeat;
+            background-position: -47px 0px;
+            width: 38px;
+            height: 38px;
+            float: left;
+        }
+
+        .nick:hover {
+            display: block;
+            border: 1px solid black;
+            background-image: url("img/login-icons.png");
+            background-repeat: no-repeat;
+            width: 38px;
+            height: 38px;
+            background-position: 1px -47px;
+        }
+
+        .user {
+            height: 32px;
+            width: 220px;
+
+        }
+
+        .res {
+            margin-bottom: 10px;
+            padding-top: 15px;
+        }
+
+        .res span {
+            margin-left: 20px;
+        }
+
+        .res a {
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="head">
+    <div class="logo-box">
+        <a href="#" class="left"><img src="img/logo.png" alt=""></a>
+        <span class=" left logo-r">欢迎登录</span>
+    </div>
+</div>
+<div class="content">
+    <div class="head1">
+        <div class="logo-box">
+            <div class="login-form">
+                <div class="res">
+                    <span>京东会员</span> <a href="#">立即注册
+                </a></div>
+                <form method="post" name="f2" id="loginform">
+                    <div class="item">
+                        <lable class="nick left"></lable>
+                        <input type="text" name="nick" value="邮箱/用户名/已验证手机" class="user">
+                    </div>
+                    <div class="item">
+                        <lable class="psw left"></lable>
+                        <input type="password" name="psw" class="user">
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" name="auto" id="auto">自动登录
+                        <a href="#">忘记密码？</a>
+                    </div>
+
+                    <input type="submit" value="登录" class="login-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class=" head foot">
+    <div class="link"><a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="">人才招聘</a>|<a href="">商家入驻</a>|<a
+            href="">广告服务</a>|<a href="">手机京东</a>|<a href="">友情链接</a>|<a href="">销售联盟</a>|<a href="">京东社区</a>|<a href="">京东公益</a>|<a
+            href="">English Site</a></div>
+    <div class="copy">Copyright©2004-2015 京东JD.com 版权所有</div>
+</div>
+
+</body>
+</html>

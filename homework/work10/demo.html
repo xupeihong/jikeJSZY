@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电话号码格式</title>
+</head>
+<body>
+<script  type="application/javascript">
+    var phone=prompt("输入电话号码");
+     var res=phone.substring(0,3);
+         if (isNaN(phone)==false&&phone.length ==11 && (res == "186" || res == "131" || res == "136")) {
+             alert("格式正确");
+         }
+         else {
+             alert("输入的电话号码有错误");
+         }
+     </script>
+</body>
+</html>

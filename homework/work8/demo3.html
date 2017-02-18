@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    for(var i=0;i<4;i++){
+        for(var k=0;k<4-i-1;k++){
+            document.write("  &nbsp;");
+        }
+        for(var j=0;j<=(2*i-1)+1;j++){
+            document.write("&nbsp;*");
+        }
+        document.write("<br/>");
+    }
+
+    for(var i=0;i<4;i++){
+        for(var k=0;k<i+1;k++){
+            document.write("  &nbsp;");
+        }
+        for(var m=0;m<(5-3*i)+i;m++){
+            document.write("&nbsp;*");
+        }
+        document.write("<br/>");
+    }
+</script>
+</body>
+</html>

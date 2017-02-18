@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+
+        function total() {
+            this.code;
+            this.team;
+            this.country;
+            this.score;
+            this.count;
+            this.one=function () {
+                for(var i=0;i<obj.length;i++)
+                {
+                    if(obj[i].code=="10001"){
+                        document.write("积分："+obj[i].score+" 净胜球："+obj[i].count+"<br>");
+                    }
+                }
+            };
+            //将美国队的积分替换成6
+            this.two=function () {
+                for(var j=0;j<obj.length;j++)
+                {
+                if(obj[j].code=="10002")
+                 {
+                  document.write("美国队积分："+(obj[j].score).toString().replace(obj[j].score,"6")+"<br>");
+                 }
+                }
+            };
+            //删除日本队的信息
+            this.three=function () {
+             var res=obj.splice(3,1);//删除元素
+                 document.write("删除日本队后数组长度："+obj.length);
+            }
+
+        }
+        var t1=new total();
+        t1.code="10001";
+        t1.team="中国队";
+        t1.country="中国";
+        t1.score=9;
+        t1.count=2;
+        var t2=new total();
+        t2.code="10002";
+        t2.team="美国队";
+        t2.country="美国";
+        t2.score=7;
+        t2.count=-9;
+        var t3=new total();
+        t3.code="10003";
+        t3.team="日本队";
+        t3.country="日本";
+        t3.score=-9;
+        t3.count=9;
+        var t4=new total();
+        t4.code="10004";
+        t4.team="韩国队";
+        t4.country="韩国";
+        t4.score=-5;
+        t4.count=-2;
+        var obj=[t1,t2,t3,t4];
+        t1.one();//显示中国队的信息
+        t2.two();//将美国队的7分改成6分
+        t3.three();//调用删除日本队信息
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

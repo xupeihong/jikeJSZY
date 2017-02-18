@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="zhi">
+<button onclick="getzimu()">字母转换</button>
+<button onclick="getzi()">字母转换</button>
+<div id="res"></div>
+<script type="application/javascript">
+    //if+switch混用
+    function getzimu() {
+        var res = document.getElementById("zhi").value;//获得字母
+                if (res == "a" || res == "b" || res == "c" || res == "d" || res == "e" || res == "f" || res == "g" || res == "h" || res == "i" || res == "j" || res == "k" || res == "l" || res == "m" || res == "n" || res == "o" || res == "p" || res == "q" || res == "r" || res == "s" || res == "t" || res == "u" || res == "v" || res == "w" || res == "x" || res == "y" || res == "z") {
+            switch (res) {
+                case res:
+                    document.getElementById("res").innerHTML = res.toUpperCase();
+                    break;
+            }
+        }else
+           document.getElementById("res").innerHTML = "不是字母";
+    }
+    //    if判断
+    function getzi() {
+        var res = document.getElementById("zhi").value;//获得字母
+        if (res == "a" || res == "b" || res == "c" || res == "d" || res == "e" || res == "f" || res == "g" || res == "h" || res == "i" || res == "j" || res == "k" || res == "l" || res == "m" || res == "n" || res == "o" || res == "p" || res == "q" || res == "r" || res == "s" || res == "t" || res == "u" || res == "v" || res == "w" || res == "x" || res == "y" || res == "z")
+            document.getElementById("res").innerHTML = res.toUpperCase();
+        /*if (res == "b")
+         document.getElementById("res").innerHTML = res.toUpperCase();
+         if (res == "c")
+         document.getElementById("res").innerHTML = res.toUpperCase();
+         if (res == "d")
+         document.getElementById("res").innerHTML = res.toUpperCase();
+         if (res == "e")
+         document.getElementById("res").innerHTML = res.toUpperCase();
+         if (res == "f")
+         document.getElementById("res").innerHTML = res.toUpperCase();
+         if (res == "g")
+         document.getElementById("res").innerHTML = res.toUpperCase();
+         if (res == "h")
+         document.getElementById("res").innerHTML = res.toUpperCase();
+         if (res == "i")
+         document.getElementById("res").innerHTML = res.toUpperCase();
+         if (res == "j")
+         document.getElementById("res").innerHTML = res.toUpperCase();*/
+    }
+</script>
+</body>
+</html>

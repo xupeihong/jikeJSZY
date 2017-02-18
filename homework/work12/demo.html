@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+          String.prototype.getEmail=function () {
+              var email=this;
+              var str=email.lastIndexOf(".");
+              var str2=email.substring(str);//.com/.cn
+              var str3=email.indexOf("@");
+              var str4=email.substring(0,str3);//拿到@前面必须有字符串
+              var str5=email.substring(str3,str3+1);//拿到@符号了解决
+              var str6=email.substring(str+1);//.后面必须有值
+              var str7=email.substring(str,str+1);//拿到.
+              var str8=email.indexOf(".");
+              var str9=email.substring(str3+1,str8);//@到.之间的内容必须不为空
+              var str10=email.substring(0,str3+1);//拿到xupeihong@的值
+              var str11=email.substring(0,str+1);//拿到xupeihong@163.的值
+              var str12=(email.split(".")).length-1;
+              if(str5=="@"&&str7=="."&&(str11.length>str10.length)&&str4!=""&&str6!=""&&str9!=""&&(str2==".com"||str2==".cn")&&str12<=2)
+              {
+                  return true;
+              }
+          }
+            if("ds@12.com".getEmail())
+            {
+                document.write("邮箱格式正确");
+            }
+            else{
+                document.write("邮箱格式错误");
+            }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

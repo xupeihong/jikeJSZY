@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="getvalue(num)">按钮</button>
+<script type="application/javascript">
+    var num=parseInt(prompt("输出的个数"));
+    function getvalue(num) {
+        var arr = [1, 2, 6, 4, 5, 6, 7, 8];
+        if (num<arr.length){//2
+            while (num>0){
+               document.write(arr[num-1] + "<br>");
+               num--;
+            }
+        }
+        else{
+            document.write("退出程序");
+        }
+
+    }
+</script>
+</body>
+</html>

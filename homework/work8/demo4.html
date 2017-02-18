@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    var ary =["a","b","c","d","c","b","d","f"];
+    var arr4=[];//存去重的数组
+    var arr3=[];//存放重复的数组
+    for(var i=0;i<ary.length;i++){
+        if(arr4.indexOf(ary[i])<0){
+            arr4.push(ary[i]);
+        }
+        else{
+            arr3.push(ary[i]+":"+i);
+        }
+          }
+    document.write(arr4+"<br>");//去重后的结果
+    document.write(arr3+"<br>");
+
+   var res = [];//存放次数
+     ary.sort();
+   for(var i = 0;i<ary.length;)
+   {
+
+       var count = 0;
+       for(var j=i;j<ary.length;j++)
+       {
+
+           if(ary[i] == ary[j])
+           {
+               count++;
+           }
+
+       }
+       res.push([ary[i],count]);
+       i+=count;
+   }
+
+      //res 二维数维中保存了 值和值的重复数
+   for(var  i = 0 ;i<res.length;i++)
+   {
+       document.writeln("值:"+res[i][0]+"重复次数:"+res[i][1]+"<br/>");
+   }
+
+</script>
+</body>
+</html>

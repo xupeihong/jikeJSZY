@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <script type="application/javascript">
+        /*window.onload = function () {
+         var all = document.getElementById("ckAll");
+         var cks = document.getElementsByName("ck");//获取所有复选框
+         for (var j = 0; j < cks.length; j++) {
+         cks[j].onclick = function () {
+         var type = true;
+         for (var k = 0; k < cks.length; k++) {
+         if (!cks[k].checked) {
+         type = false;
+         all.checked = false;
+         break;
+         }
+         }
+         if (type)
+         all.checked = true;
+         }
+         }
+         }*/
+    </script>
+    <style type="text/css">
+        .message {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<a href="javascript:void(0)" id="Addinfo">添加信息</a><br/>
+<form action="" method="post">
+姓名：<input type="text" name="name"/><span class="message">*</span><br/>
+性别：<input type="text" name="sex"/><span class="message">*</span><br/>
+成绩：<input type="text" name="score"/><span class="message">*</span><br/>
+<table border="1" id="tab">
+    <tr>
+        <th><input type="checkbox" id="ckAll" name="ckall"/> 全选</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>成绩</th>
+        <th>操作</th>
+    </tr>
+    <tbody>
+    <tr>
+        <td><input type="checkbox" name="ck" class="ck"/></td>
+        <td><input type="text" readonly value="张三"></td>
+        <td><input type="text" readonly value="男"></td>
+        <td><input type="text" readonly value="60"></td>
+        <td><a href="javascript:void(0)" class="del">删除</a> <a href="javascript:void(0)" class="edite">修改</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="ck" class="ck"/></td>
+        <td><input type="text" readonly value="李四"></td>
+        <td><input type="text" value="男" readonly></td>
+        <td><input type="text"  readonly value="56"></td>
+        <td><a href="javascript:void(0)" class="del">删除</a> <a href="javascript:void(0)" class="edite">修改</a></td>
+    </tr>
+    </tbody>
+    <!-- <tr>
+         <td><input type="checkbox" name="ck"/></td>
+         <td><input type="text" value="李四"/></td>
+         <td><input type="radio" name="gender"/>男
+             <input type="radio" checked name="gender"/>女
+         </td>
+         <td><input type="text" value="80"/></td>
+         <td><a href="javascript:void(0)" class="del">删除</a> <a href="javascript:void(0)" class="edite">确定</a></td>
+     </tr>-->
+    <tr>
+        <td>总成绩</td>
+        <td colspan="4" id="total"><span class="sum">116</span></td>
+    </tr>
+</table>
+</form>
+<a href="javascript:void(0)" id="delall">删除所选</a>
+</body>
+</html>

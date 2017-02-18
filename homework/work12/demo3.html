@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        //电话号码  1、11位数字，[186 131 136]开头
+        function getphone() {
+                var res=getphone.prototype;
+              if(typeof (res.fun)!="function")
+                {
+                    var arr=[153,186,155];
+                    res.fun=function (str) {
+                        if(str.length!=11){
+                         return false;
+                      }
+                      if(isNaN(str))
+                      {
+                          return false;
+                      }
+                      if(arr!=null)
+                      {
+                          var type=true;
+                          for(var i=0;i<arr.length;i++)
+                          {
+                             if(arr[i]==str.substring(0,3)){
+                                type= false;
+                                 break;
+                             }
+                          }
+                          if(type)
+                          {
+                              return false;
+                          }
+                      }
+                      return true;
+                    }
+                }
+        }
+        var num=prompt("输入电话号码");
+        document.write(new getphone().fun(num));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

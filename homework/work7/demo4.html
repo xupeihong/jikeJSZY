@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+头：<input type="text" id="head">
+足：<input type="text" id="foot">
+<button  onclick="getresult()">计算</button>
+<script type="application/javascript">
+function getresult() {
+    var ji=0;//鸡
+    var tu=0;//兔
+    var jiji=1*document.getElementById("head").value;//头数量
+    var tuzi=1*document.getElementById("foot").value;//足数量
+    while (ji<jiji){
+        tu=jiji-ji;
+        if(2*ji+4*tu==tuzi){
+           document.write("鸡有"+ji+"只,兔子有"+tu+"只");
+            return;
+        }
+          ji++;
+    }
+    document.write("没有完整的动物");
+}
+
+</script>
+</body>
+</html>
